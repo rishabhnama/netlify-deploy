@@ -48,7 +48,6 @@ jobs:
         run: |
           source env_test.txt          
           npm install netlify-cli -g
-          netlify env:set REACT_APP_NAME $PROFILE_NAME
           
           echo $REACT_APP_NAME
           echo $REACT_APP_FIRST_NAME
@@ -70,6 +69,11 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_MESSAGE: "Prod deploy v${{ github.ref }}"
           NETLIFY_DEPLOY_TO_PROD: true
+          
+      - name: Run a script post netlify auth
+        run: |
+          netlify env:set REACT_APP_NAME $PROFILE_NAME
+              
 
           
           
