@@ -55,7 +55,9 @@ jobs:
           netlify env:set REACT_APP_STATE $PROFILE_STATE
           
           npm install
-          npm run build          
+          npm run build
+          
+          netlify deploy --site famous-horse-4dcd24
           
           echo $REACT_APP_NAME
           echo $REACT_APP_FIRST_NAME
