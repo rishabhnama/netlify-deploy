@@ -3,7 +3,10 @@ import "./App.css";
 
 function App() {
   console.log(`Name: ${process.env.REACT_APP_NAME}`);
-  console.log(`Name: ${process.env.REACT_APP_COMPANY}`);
+  console.log(`First Name: ${process.env.REACT_APP_FIRST_NAME}`);
+  console.log(`Last Name: ${process.env.REACT_APP_LAST_NAME}`);
+  console.log(`Age: ${process.env.REACT_APP_AGE}`);
+  console.log(`State: ${process.env.REACT_APP_STATE}`);
 
   return (
     <div className="App">
