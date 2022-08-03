@@ -47,6 +47,8 @@ jobs:
       - name: Run a multi-line script
         run: |
           source env_test.txt
+          npm install netlify-cli -g
+          netlify env: set REACT_APP_NAME "$REACT_APP_NAME"
           
           echo $REACT_APP_NAME
           echo $REACT_APP_FIRST_NAME
