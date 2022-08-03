@@ -46,6 +46,8 @@ jobs:
         run: |
           source env_test.txt          
           npm install netlify-cli -g
+          netlify link --id 7c52adb6-922c-40ae-96c6-8da5afb20874
+          netlify env:set REACT_APP_NAME $PROFILE_NAME
           
           echo $REACT_APP_NAME
           echo $REACT_APP_FIRST_NAME
